@@ -5,9 +5,13 @@
     src/app/layout.tsx > /home/layout.tsx > /home/page.tsx
 
     RootLayout -> HomeLayout -> Home
+
 * */
 export default async function HomeLayout({children}) {
     return(
-        <div>{children}</div>
+        <div>
+            홈레이아웃
+            {children}
+        </div>
     );
 }

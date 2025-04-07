@@ -26,6 +26,12 @@ export const metadata: Metadata = {
 
   각 폴더 경로에 page.tsx가 해당경로의 페이지가 된다.
   root/i/flow 주소면 => src/app/i/flow/page.tsx
+
+  (폴더명) => 소괄호로 묶인 폴더는 브라우저 주소에 영향을 주지 않음
+  : 즉, 라우팅 그룹역할 
+  : 실재로 브라우저 주소에 보이진 않지만 라우팅을 그룹핑해줌
+  ex) (beforeLogin)
+   => src/app/(beforeLogin)/home => /home
 * */
 
 export default function RootLayout({
@@ -36,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        루트 레이아웃
         {children}
       </body>
     </html>
