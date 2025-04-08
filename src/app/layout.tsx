@@ -34,15 +34,15 @@ export const metadata: Metadata = {
    => src/app/(beforeLogin)/home => /home
 * */
 
+type Props = {
+  children: React.ReactNode
+};
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  children
+}: Props) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        루트 레이아웃
+      <body>
         {children}
       </body>
     </html>
